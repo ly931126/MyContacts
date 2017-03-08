@@ -51,20 +51,20 @@
 
 ###### 1.增加的方法
  > @Override
-	public void add(Person p) {
-		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
-		ContentValues values = new ContentValues();
-		values.put(_ID, p.get_id());
-		values.put(NAME, p.getName());
-		db.insert(STUDENT_TABLE, null, values);
-	}
+-	public void add(Person p) {
+-		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
+-		ContentValues values = new ContentValues();
+-		values.put(_ID, p.get_id());
+-		values.put(NAME, p.getName());
+-		db.insert(STUDENT_TABLE, null, values);
+-	}
  
 ######  2.删除的方法
 >  @Override
-	public void delete(int id) {
-		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
-		db.delete(STUDENT_TABLE, _ID + "=?", new String[]{String.valueOf(id)});
-	}
+-	public void delete(int id) {
+-		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
+-		db.delete(STUDENT_TABLE, _ID + "=?", new String[]{String.valueOf(id)});
+-	}
  
 ###### 3.修改的方法
  >  /**
