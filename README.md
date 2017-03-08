@@ -65,64 +65,64 @@
 		db.delete(STUDENT_TABLE, _ID + "=?", new String[]{String.valueOf(id)});
 	}
  
- ###### 3.修改的方法
+###### 3.修改的方法
  >  /**
 	 * 修改指定id的数据
 	 * 
 	 * @param p
 	 */
-	@Override
-	public void updata(Person p) {
-		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
-		ContentValues values = new ContentValues();
-		values.put(_ID, p.get_id());
-		values.put(NAME, p.getName());
-		db.update(STUDENT_TABLE, values, _ID + "=?", new String[]{String.valueOf(p.get_id())});
+- @Override
+- 	public void updata(Person p) {
+- 		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
+- 		ContentValues values = new ContentValues();
+- 		values.put(_ID, p.get_id());
+- 		values.put(NAME, p.getName());
+- 		db.update(STUDENT_TABLE, values, _ID + "=?", new String[]{String.valueOf(p.get_id())});
 		
-	}
+- 	}
  
- ######  4.查询的方法
- #######  (1)查询表中所有的数据
+######  4.查询的方法
+-   (1)查询表中所有的数据
  > /**
 	 * 查询表中所有的数据
 	 * 
 	 * @return
 	 */
-	@Override
-	public List<Person> find() {
-		List<Person> persons = null;
-		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
-		Cursor cursor = db.query(STUDENT_TABLE, null, null, null, null, null, null);
-		if (cursor != null) {
-			persons = new ArrayList<>();
-			while (cursor.moveToNext()) {
-				Person person = new Person();
-				int id = cursor.getInt(cursor.getColumnIndex(_ID));
-				String name = cursor.getString(cursor.getColumnIndex(NAME));
-				person.set_id(id);
-				person.setName(name);
-				persons.add(person);
-			}
-		}
-		return persons;
-	}
+- 	@Override
+- 	public List<Person> find() {
+- 		List<Person> persons = null;
+- 		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
+- 		Cursor cursor = db.query(STUDENT_TABLE, null, null, null, null, null, null);
+- 		if (cursor != null) {
+- 			persons = new ArrayList<>();
+- 			while (cursor.moveToNext()) {
+- 				Person person = new Person();
+- 				int id = cursor.getInt(cursor.getColumnIndex(_ID));
+- 				String name = cursor.getString(cursor.getColumnIndex(NAME));
+- 				person.set_id(id);
+- 				person.setName(name);
+- 				persons.add(person);
+- 			}
+- 		}
+- 		return persons;
+- 	}
  
- #######  (2)查询指定id的数据
+-   (2)查询指定id的数据
  >  // 查询指定id的数据
-	@Override
-	public Person findById(int id) {
-		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
-		Cursor cursor = db.query(STUDENT_TABLE, null, _ID + "=?", new String[]{String.valueOf(id)}, null, null, null);
-		Person person = null;
-		if (cursor != null && cursor.moveToFirst()) {
-			person = new Person();
-			int id1 = cursor.getInt(cursor.getColumnIndex(_ID));
-			String name1 = cursor.getString(cursor.getColumnIndex(NAME));
-			person.set_id(id1);
-			person.setName(name1);
+-	@Override
+-	public Person findById(int id) {
+-		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
+-		Cursor cursor = db.query(STUDENT_TABLE, null, _ID + "=?", new String[]{String.valueOf(id)}, null, null, null);
+-		Person person = null;
+-		if (cursor != null && cursor.moveToFirst()) {
+-			person = new Person();
+-			int id1 = cursor.getInt(cursor.getColumnIndex(_ID));
+-			String name1 = cursor.getString(cursor.getColumnIndex(NAME));
+-			person.set_id(id1);
+-			person.setName(name1);
 			
-		}
-		return person;
-	}
+-		}
+-		return person;
+-	}
  
  
