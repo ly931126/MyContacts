@@ -41,8 +41,88 @@
 -  用
 - mDrawerLayout.openDrawer(Gravity.LEFT);打开左边布局
 
-#####  数据库作用
+#####  数据库的使用
 -  数据库主要用于联系人的增删改查和记事本的增删改查
--  数据库的帮助类继承SQLiteOpenHelper,实现onCreate()和 哦你UpGrade（）方法
+-  数据库的帮助类继承SQLiteOpenHelper,实现onCreate()和 onUpGrade（）方法
 -  （1）onCreate()当数据库首次被创建时执行该方法，一般将创建表等初始化操作在该方法中执行，如图
 -   ![onCreate](https://github.com/ly931126/MyContacts/blob/master/picture/createtable.png)
+-   (2)onUpGrade()方法，当打开数据库时传入的版本号与当前的版本号不同时会调用该方法，如图
+-    ![onUpGrade](https://github.com/ly931126/MyContacts/blob/master/picture/onUpGrade.png)
+###### 1.增加的方法
+ > @Override
+	public void add(Person p) {
+		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(_ID, p.get_id());
+		values.put(NAME, p.getName());
+		db.insert(STUDENT_TABLE, null, values);
+	}
+ 
+######  2.删除的方法
+>  @Override
+	public void delete(int id) {
+		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
+		db.delete(STUDENT_TABLE, _ID + "=?", new String[]{String.valueOf(id)});
+	}
+ 
+ ###### 3.修改的方法
+ >  /**
+	 * 修改指定id的数据
+	 * 
+	 * @param p
+	 */
+	@Override
+	public void updata(Person p) {
+		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(_ID, p.get_id());
+		values.put(NAME, p.getName());
+		db.update(STUDENT_TABLE, values, _ID + "=?", new String[]{String.valueOf(p.get_id())});
+		
+	}
+ 
+ ######  4.查询的方法
+ #######  (1)查询表中所有的数据
+ > /**
+	 * 查询表中所有的数据
+	 * 
+	 * @return
+	 */
+	@Override
+	public List<Person> find() {
+		List<Person> persons = null;
+		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
+		Cursor cursor = db.query(STUDENT_TABLE, null, null, null, null, null, null);
+		if (cursor != null) {
+			persons = new ArrayList<>();
+			while (cursor.moveToNext()) {
+				Person person = new Person();
+				int id = cursor.getInt(cursor.getColumnIndex(_ID));
+				String name = cursor.getString(cursor.getColumnIndex(NAME));
+				person.set_id(id);
+				person.setName(name);
+				persons.add(person);
+			}
+		}
+		return persons;
+	}
+ 
+ #######  (2)查询指定id的数据
+ >  // 查询指定id的数据
+	@Override
+	public Person findById(int id) {
+		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
+		Cursor cursor = db.query(STUDENT_TABLE, null, _ID + "=?", new String[]{String.valueOf(id)}, null, null, null);
+		Person person = null;
+		if (cursor != null && cursor.moveToFirst()) {
+			person = new Person();
+			int id1 = cursor.getInt(cursor.getColumnIndex(_ID));
+			String name1 = cursor.getString(cursor.getColumnIndex(NAME));
+			person.set_id(id1);
+			person.setName(name1);
+			
+		}
+		return person;
+	}
+ 
+ 
