@@ -48,6 +48,7 @@
 -   ![onCreate](https://github.com/ly931126/MyContacts/blob/master/picture/createtable.png)
 -   (2)onUpGrade()方法，当打开数据库时传入的版本号与当前的版本号不同时会调用该方法，如图
 -    ![onUpGrade](https://github.com/ly931126/MyContacts/blob/master/picture/onUpGrade.png)
+
 ###### 1.增加的方法
  > @Override
 	public void add(Person p) {
