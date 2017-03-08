@@ -43,6 +43,6 @@
 
 #####  数据库作用
 -  数据库主要用于联系人的增删改查和记事本的增删改查
-
-
-
+-  数据库的帮助类继承SQLiteOpenHelper,实现onCreate()和 哦你UpGrade（）方法
+-  （1）onCreate()当数据库首次被创建时执行该方法，一般将创建表等初始化操作在该方法中执行，如图
+-   ![onCreate](https://github.com/ly931126/MyContacts/blob/master/picture/createtable.png)
