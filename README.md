@@ -30,6 +30,7 @@
 -   compile 'com.android.support:appcompat-v7:21+'
 -   compile project(':PullToRefreshLibrary')
 - }
+
 #####  注：PullToRefreshLibrary为第三方框架，用于刷新联系人，这里要添加依赖
 - DrawerLayout布局用于侧滑菜单
 -  DrawerLayout 用作侧滑效果，使用简单
