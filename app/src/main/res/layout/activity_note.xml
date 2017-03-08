@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context="com.liye.mycontacts.menu.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/lan1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/btn_back"
+            android:background="@null"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:background="@null"
+            android:text="登  录"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_zhuce"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/btn_reg"
+            android:background="@null"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="20dp"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/girlfly"
+         android:layout_marginLeft="110dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/register_test_input"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text="@string/btn_user" />
+
+        <EditText
+            android:id="@+id/edt_user"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_user" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_swipe"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/login_buttom_press_bg" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/register_test_input"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text="@string/btn_password" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_password"
+            android:inputType="textPassword"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_user2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+             android:layout_marginLeft="150dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/lan1"
+            android:text="@string/btn_login"
+            android:textSize="20dp" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_zhaohui"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@drawable/ic_personal_lookback_pwd_pressed" />-->
+    </LinearLayout>
+</LinearLayout>

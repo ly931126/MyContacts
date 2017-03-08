@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   android:background="#000000"
+
+    >
+    <!--android:background="@drawable/lan1"-->
+    <TextView
+
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="放松一下吧"
+        android:layout_marginBottom="30dp"
+        />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="播放"
+        android:background="@drawable/star2"
+
+        android:layout_gravity="bottom" />
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/img"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="240dp"-->
+        <!--/>-->
+
+
+
+        <Button
+            android:layout_marginTop="70dp"
+            android:id="@+id/pause"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="暂停"
+            android:background="@drawable/star2"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_marginTop="60dp"
+            android:id="@+id/stop"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="停止"
+            android:background="@drawable/star2"
+            android:layout_gravity="right" />
+
+
+
+
+    <ImageView
+        android:layout_marginTop="120dp"
+        android:id="@+id/menu1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/star2" />
+
+</LinearLayout>

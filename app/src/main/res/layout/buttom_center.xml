@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zizi"
+         >
+        <!--声明FrameLayout，tab页里的内容信息-->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </FrameLayout>
+        <!--TabWidget 通过切换多个标签从而显示出多个不同内容，-->
+        <!--能够展示内容丰富的页面信息，而且彼此之间不会干扰，有利于展示。-->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="53dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/zise"
+            android:layout_alignParentBottom="true">
+        </TabWidget>
+    </RelativeLayout>
+    <!--android:background="@drawable/select_state"-->
+</TabHost>

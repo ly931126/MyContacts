@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyContacts</string>
+    <string name="title_activity_menu">MainActivity</string>
+    <string name="img_btn_exitgame">退出</string>
+    <string name="img_btn_exitor">是否退出？</string>
+    <string name="img_btn_exityes">确定</string>
+    <string name="img_btn_exitno">取消</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="input_password">请输入密码.....</string>
+    <string name="btn_password">密码：</string>
+    <string name="btn_reg">注  册</string>
+    <string name="input_user">请输入账号.....</string>
+    <string name="btn_user">账号：</string>
+    <string name="btn_login">登  录</string>
+    <string name="btn_back">返 回</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+</resources>

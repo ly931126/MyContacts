@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/lan1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/lan1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+           android:background="@null"
+            android:layout_gravity="center_horizontal"
+            android:text="返 回"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:text="注  册"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/girlfly"
+        android:layout_marginLeft="110dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:background="@drawable/register_test_input"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_reg_user"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text="账 号：" />
+
+        <EditText
+            android:id="@+id/edt_reg_user"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号" 
+            android:inputType="phone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:background="@drawable/register_test_input"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_reg_password"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text="密 码：" />
+
+        <EditText
+            android:id="@+id/edt_reg1_password"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="6-20个字母或字符"
+            android:password="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:background="@drawable/register_test_input"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_reg2_password"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:textSize="14sp"
+            android:text="确认密码:" />
+
+        <EditText
+            android:id="@+id/edt_reg3_password"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="请确认密码"
+            android:password="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edt_test"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入验证码"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_gettest"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/lan1"
+            android:text="获取验证码"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="65dp"
+        android:background="@drawable/lan1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_last_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:text="注  册"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>
