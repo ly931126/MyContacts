@@ -23,7 +23,8 @@
  -              图11  记事本查看记录界面
 - ![记事本书写界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B9%A6%E5%86%99%E7%95%8C%E9%9D%A2.png)
  -              图12  记事本书写界面
-# 2.用法
+ 
+ # 2.用法
 ```
  dependencies {
   compile fileTree(include: ['*.jar'], dir: 'libs')
