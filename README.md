@@ -24,13 +24,15 @@
 - ![记事本书写界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B9%A6%E5%86%99%E7%95%8C%E9%9D%A2.png)
  -              图12  记事本书写界面
 # 2.用法
-- dependencies {
--  compile fileTree(include: ['*.jar'], dir: 'libs')
--    testCompile 'junit:junit:4.12'
--   compile 'com.android.support:appcompat-v7:21+'
--   compile project(':PullToRefreshLibrary')
-- }
-
+···
+ dependencies {
+  compile fileTree(include: ['*.jar'], dir: 'libs')
+   testCompile 'junit:junit:4.12'
+   compile 'com.android.support:appcompat-v7:21+'
+   compile project(':PullToRefreshLibrary')
+ }
+ 
+ ···
 #####  注：PullToRefreshLibrary为第三方框架，用于刷新联系人，这里要添加依赖
 - DrawerLayout布局用于侧滑菜单
 -  DrawerLayout 用作侧滑效果，使用简单
@@ -44,8 +46,18 @@
 #####  数据库的使用
 -  数据库主要用于联系人的增删改查和记事本的增删改查
 -  数据库的帮助类继承SQLiteOpenHelper,实现onCreate()和 onUpGrade（）方法
--  （1）onCreate()当数据库首次被创建时执行该方法，一般将创建表等初始化操作在该方法中执行，如图
--   ![onCreate](https://github.com/ly931126/MyContacts/blob/master/picture/createtable.png)
+-  （1）onCreate()当数据库首次被创建时执行该方法，一般将创建表等初始化操作在该方法中执行，
+···
+// 私人最终的静态字符串create_tbl =“创建表”+“日（_id整型主键递增，内容文本，数据，文本，天文本，提升文本）”；
+	private static final String	CREATE_TBL	= " create table " + " Dialy(_id integer primary key autoincrement,content text,data text,days text,winder text) ";
+	// 当数据库被首次创建时执行该方法，一般将创建表等初始化操作在该方法中执行。
+	public void onCreate(SQLiteDatabase db) {
+		this.db = db;
+		// TODO 创建数据库后，对数据库的操作
+		// 创建一个表格，表格名为Dialy，id自动增长，列数为四列，数据类型为text（字符串）
+		db.execSQL(CREATE_TBL);
+	}
+···
 -   (2)onUpGrade()方法，当打开数据库时传入的版本号与当前的版本号不同时会调用该方法，如图
 -    ![onUpGrade](https://github.com/ly931126/MyContacts/blob/master/picture/onUpGrade.png)
 
