@@ -87,10 +87,11 @@
 		SQLiteDatabase db = mDatabaseHelper.getWritableDatabase();
 		db.delete(STUDENT_TABLE, _ID + "=?", new String[]{String.valueOf(id)});
 	}
-	```
+```
  
 ###### 3.修改的方法
- ``` /**
+``` 
+/**
 	 * 修改指定id的数据
 	 * 
 	 * @param p
@@ -104,11 +105,12 @@
 		db.update(STUDENT_TABLE, values, _ID + "=?", new String[]{String.valueOf(p.get_id())});
 		
 	}
-	```
+```
  
 ######  4.查询的方法
 -   (1)查询表中所有的数据
- ``` /**
+ ```
+ /**
 	 * 查询表中所有的数据
 	 * 
 	 * @return
@@ -133,7 +135,8 @@
 	}
  ```
 -   (2)查询指定id的数据
- ```  // 查询指定id的数据
+ ```  
+ // 查询指定id的数据
  	@Override
  	public Person findById(int id) {
  		SQLiteDatabase db = mDatabaseHelper.getReadableDatabase();
@@ -149,6 +152,6 @@
  		}
  		return person;
  	}
-	```
+```
  
  
