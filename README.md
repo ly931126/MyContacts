@@ -11,7 +11,7 @@
  -              图5   侧滑菜单界面
 - ![日历界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E6%97%A5%E5%8E%86%E7%95%8C%E9%9D%A2.png)
  -              图6   日历界面
-- ![冷笑话界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E6%97%A5%E5%8E%86%E7%95%8C%E9%9D%A2.png)
+- ![冷笑话界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E5%86%B7%E7%AC%91%E8%AF%9D%E7%95%8C%E9%9D%A2.png)
  -              图7   冷笑话界面
 - ![音乐界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E9%9F%B3%E4%B9%90%E7%95%8C%E9%9D%A2.png)
  -              图8   音乐界面
