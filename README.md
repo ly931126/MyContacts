@@ -1,6 +1,6 @@
 # 1.电话簿演示图
 - ![联系人主界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E8%81%94%E7%B3%BB%E4%BA%BA%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
- -              图1   联系人主界面
+               图1   联系人主界面
 - ![添加联系人界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E6%B7%BB%E5%8A%A0%E8%81%94%E7%B3%BB%E4%BA%BA%E7%95%8C%E9%9D%A2.png)
  -              图2   添加联系人界面
 - ![查看联系人详情界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E6%9F%A5%E7%9C%8B%E8%81%94%E7%B3%BB%E4%BA%BA%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.png)
@@ -48,7 +48,7 @@
 #####  数据库的使用
 -  数据库主要用于联系人的增删改查和记事本的增删改查
 -  数据库的帮助类继承SQLiteOpenHelper,实现onCreate()和 onUpGrade（）方法
--  （1）onCreate()当数据库首次被创建时执行该方法，一般将创建表等初始化操作在该方法中执行，
+（1）onCreate()当数据库首次被创建时执行该方法，一般将创建表等初始化操作在该方法中执行，
 ```
 // 私人最终的静态字符串create_tbl =“创建表”+“日（_id整型主键递增，内容文本，数据，文本，天文本，提升文本）”；
 	private static final String	CREATE_TBL	= " create table " + " Dialy(_id integer primary key autoincrement,content text,data text,days text,winder text) ";
@@ -60,7 +60,7 @@
 		db.execSQL(CREATE_TBL);
 	}
 ```
--   (2)onUpGrade()方法，当打开数据库时传入的版本号与当前的版本号不同时会调用该方法，如
+   (2)onUpGrade()方法，当打开数据库时传入的版本号与当前的版本号不同时会调用该方法，如
 ```
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -108,7 +108,7 @@
 ```
  
 ######  4.查询的方法
--   (1)查询表中所有的数据
+   (1)查询表中所有的数据
  ```
  /**
 	 * 查询表中所有的数据
