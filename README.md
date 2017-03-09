@@ -115,6 +115,8 @@
 	 * 
 	 * @return
 	 */
+```
+```
   	@Override
   	public List<Person> find() {
   		List<Person> persons = null;
@@ -134,7 +136,7 @@
  		return persons;
 	}
  ```
--   (2)查询指定id的数据
+ (2)查询指定id的数据
  ```  
  // 查询指定id的数据
  	@Override
