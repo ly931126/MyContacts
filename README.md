@@ -1,6 +1,6 @@
 # 1.电话簿演示图
 - ![联系人主界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E8%81%94%E7%B3%BB%E4%BA%BA%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
-               图1   联系人主界面
+ -              图1   联系人主界面
 - ![添加联系人界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E6%B7%BB%E5%8A%A0%E8%81%94%E7%B3%BB%E4%BA%BA%E7%95%8C%E9%9D%A2.png)
  -              图2   添加联系人界面
 - ![查看联系人详情界面](https://github.com/ly931126/MyContacts/blob/master/picture/%E6%9F%A5%E7%9C%8B%E8%81%94%E7%B3%BB%E4%BA%BA%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.png)
